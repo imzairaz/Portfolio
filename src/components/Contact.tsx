@@ -4,16 +4,12 @@ import { FiMail, FiMapPin, FiGithub, FiLinkedin, FiArrowRight } from 'react-icon
 import { toast } from 'sonner';
 import emailjs from '@emailjs/browser';
 
-// ⚠️ SETUP INSTRUCTIONS:
-// 1. Go to https://www.emailjs.com/ and create a free account
-// 2. Add an email service (Gmail, Outlook, etc.) and note the SERVICE_ID
-// 3. Create an email template with variables: {{from_name}}, {{from_email}}, {{message}}
-// 4. Note your TEMPLATE_ID and PUBLIC_KEY from Account > API Keys
-// 5. Replace the values below:
-
-const EMAILJS_SERVICE_ID = 'service_4p7ac7e';  // e.g., 'service_abc123'
-const EMAILJS_TEMPLATE_ID = 'template_04mc74o'; // e.g., 'template_xyz789'
-const EMAILJS_PUBLIC_KEY = 'JmLdZ3FTtCQ0dDKqT';   // e.g., 'AbCdEfGhIjKlMnOp'
+// ---------------------------------------------------------
+// ⚠️ CRITICAL: Replace these with your ACTUAL keys from EmailJS
+// ---------------------------------------------------------
+const EMAILJS_SERVICE_ID = 'service_4p7ac7e'; // 1. Go to "Email Services" and copy the ID (e.g., service_z8u9x1)
+const EMAILJS_TEMPLATE_ID = 'template_8w7yz6h';    // 2. This looks like your real template ID, keep it if correct.
+const EMAILJS_PUBLIC_KEY = 'JmLdZ3FTtCQ0dDKqT'; // 3. Go to "Account" -> "API Keys" and copy the Public Key.
 
 const contactInfo = [
   { icon: FiMail, label: 'Email', value: 'im.zairaz@gmail.com', href: 'mailto:im.zairaz@gmail.com' },
@@ -29,6 +25,7 @@ const Contact = () => {
   const ref = useRef(null);
   const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
@@ -36,17 +33,13 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validation
+    // 1. Validation
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       toast.error('Please fill in all fields');
       return;
     }
 
-    // Check if EmailJS is configured
-    if (EMAILJS_SERVICE_ID === 'service_4p7ac7e') {
-      toast.error('EmailJS not configured. Check Contact.tsx for setup instructions.');
-      return;
-    }
+    // (The blocking check has been removed from here)
 
     setIsSubmitting(true);
 
@@ -55,19 +48,21 @@ const Contact = () => {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
+          // These variables match your EmailJS template
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_name: 'Zairaz', // Your name
+          to_name: 'Zairaz',
         },
         EMAILJS_PUBLIC_KEY
       );
 
-      toast.success('Message sent! I\'ll get back to you soon.');
+      toast.success('Message sent!');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('EmailJS Error:', error);
-      toast.error('Failed to send message. Please try again or email directly.');
+      // Helpful error message for debugging
+      toast.error('Failed to send. Check console for "EmailJS Error".');
     } finally {
       setIsSubmitting(false);
     }
