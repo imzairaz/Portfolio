@@ -4,9 +4,9 @@ import TypingEffect from './TypingEffect';
 import CodeBlock from './CodeBlock';
 
 const socialLinks = [
-  { icon: FiGithub, href: 'https://github.com/imzairaz', label: 'GitHub' },
+  { icon: FiGithub, href: 'https://github.com/zairaz', label: 'GitHub' },
   { icon: FiLinkedin, href: 'https://linkedin.com/in/zairaz', label: 'LinkedIn' },
-  { icon: FiTwitter, href: 'https://twitter.com/im_zairaz', label: 'Twitter' },
+  { icon: FiTwitter, href: 'https://twitter.com/zairaz', label: 'Twitter' },
 ];
 
 const Hero = () => {
@@ -164,7 +164,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
