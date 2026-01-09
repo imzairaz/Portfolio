@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+# ⚡ Zairaz | Portfolio
 
-## Project info
+![Portfolio Banner](https://github.com/user-attachments/assets/562b9e41-3776-43e6-8f1d-489a18c281ff)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
-## How can I edit this code?
+> A modern, high-performance portfolio website built to showcase my projects and skills as a MERN Stack Developer. Designed with **shadcn-ui**, **Tailwind CSS**, and **Framer Motion** for a sleek, responsive user experience.
 
-There are several ways of editing your application.
+🔗 **Live Site:** [https://zairaz.vercel.app/](https://zairaz.vercel.app/)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+This project is built with the latest modern web technologies:
 
-**Use your preferred IDE**
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ✨ Features
 
-Follow these steps:
+* **🎨 Modern UI/UX:** Dark mode aesthetic with Glassmorphism effects.
+* **⚡ Blazing Fast:** Powered by Vite for instant HMR (Hot Module Replacement).
+* **📱 Fully Responsive:** Mobile-first design that adapts to all screen sizes.
+* **✨ Interactive Elements:** Smooth animations powered by Framer Motion.
+* **📧 Contact Form:** Integrated with EmailJS for direct communication.
+* **🧩 Component Library:** Utilizes `shadcn-ui` for accessible and customizable components.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+To run this project locally, follow these steps.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Prerequisites
 
-**Edit a file directly in GitHub**
+* **Node.js & npm** (Install with [nvm](https://github.com/nvm-sh/nvm) recommended)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Installation
 
-**Use GitHub Codespaces**
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/imzairaz/Portfolio.git](https://github.com/imzairaz/Portfolio.git)
+    ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2.  **Navigate to the project directory**
+    ```bash
+    cd Portfolio
+    ```
 
-## What technologies are used for this project?
+3.  **Install dependencies**
+    ```bash
+    npm i
+    ```
 
-This project is built with:
+4.  **Set up Environment Variables**
+    Create a `.env` file in the root directory and add your EmailJS credentials (required for the contact form):
+    ```env
+    VITE_EMAIL_SERVICE_ID=your_service_id
+    VITE_EMAIL_TEMPLATE_ID=your_template_id
+    VITE_EMAIL_PUBLIC_KEY=your_public_key
+    ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+5.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
 
-## How can I deploy this project?
+6.  Open [http://localhost:8080](http://localhost:8080) in your browser to view the project.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## ☁️ Development Options
 
-Yes, you can!
+You can also work on this project using cloud environments:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+* **GitHub Codespaces:** Navigate to the repo main page -> Click **Code** -> Select **Codespaces** -> **New codespace**.
+* **Direct GitHub Edit:** Navigate to any file and click the ✏️ (Edit) icon to make quick changes.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 🚢 Deployment
+
+This project is deployed using **Vercel**.
+
+1.  Push your latest changes to GitHub.
+2.  Import the repository into Vercel.
+3.  Add your Environment Variables in the Vercel Project Settings.
+4.  Vercel will automatically build and deploy your site.
+
+---
+
+## 👨‍💻 Author
+
+**Mohamed Zairaz**
+
+* 🌐 [GitHub](https://github.com/imzairaz)
+* 👔 [LinkedIn](https://linkedin.com/in/zairaz)
+* 📧 [Email](mailto:im.zairaz@gmail.com)
+
+---
+
+<p align="center">
+  Built with ❤️ using React & shadcn-ui
+</p>
