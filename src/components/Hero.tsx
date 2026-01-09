@@ -111,8 +111,8 @@ const Hero = () => {
                 <FiArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.a>
               <motion.a
-                href="/resume.pdf"
-                download
+                href="/Zai_CV.pdf"
+                download="Zai_CV.pdf"
                 className="btn-outline flex items-center gap-2"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
