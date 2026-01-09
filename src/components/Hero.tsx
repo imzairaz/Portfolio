@@ -6,7 +6,7 @@ import CodeBlock from './CodeBlock';
 const socialLinks = [
   { icon: FiGithub, href: 'https://github.com/imzairaz', label: 'GitHub' },
   { icon: FiLinkedin, href: 'https://linkedin.com/in/zairaz', label: 'LinkedIn' },
-  { icon: FiTwitter, href: 'https://twitter.com/imzairaz', label: 'Twitter' },
+  { icon: FiTwitter, href: 'https://twitter.com/im_zairaz', label: 'Twitter' },
 ];
 
 const Hero = () => {
